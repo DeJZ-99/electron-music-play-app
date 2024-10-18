@@ -10,8 +10,8 @@
 * <b>`node:fs`：</b>文件系统，实现文件的增删改查</br>
 * <b>`node:path`：</b>实现文件定位</br>
 * <b>`XMLHttpRequest`：</b>网络请求</br>
-* <b>`JS module`：</b>ES6模块化，避免全局污染</br>
-* <b>`Node commonJS`：</b>主进程模块化</br>
+* <b>`module`：</b>ES6模块化以及CommonJS模块化，避免全局污染</br>
+* <b>`Web Audio API`：</b>实现音频可视化效果，及音乐律动效果</br>
 * <b>`localStorage`：</b>实现数据暂存</br>
 
 ## 项目效果图
