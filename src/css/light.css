@@ -1,0 +1,445 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        /* 背景颜色 */
+        --bgc: #EFEFEF;
+        /* 被选中 背景颜色 */
+        --c-bgc: #FFD700;
+        /* 字体颜色 */
+        --fc: #005B99;
+        /* 被选中 字体颜色 */
+        --c-fc: #0000FF;
+        /* 盒子阴影颜色 */
+        --bs: 3px 3px 3px #B8B8B8, -2px -2px 2px #FFFFFF;
+        /* 被选中 盒子阴影颜色 */
+        --c-bs: 0 0 0 #B8B8B8, 0 0 0 #FFFFFF, inset 8px 8px 8px #B8B8B8, inset -8px -8px 8px #FFFFFF;
+        /* 字体阴影颜色 */
+        --ts: 3px 3px 3px #B8B8B8, -4px -4px 4px #FFFFFF;
+        /* 主题按钮 背景颜色1 */
+        --t-bgc1: #333333;
+        /* 主题按钮 背景颜色2 */
+        --t-bgc2: #FFFFFF;
+        /* 主题按钮 盒子阴影颜色 */
+        --t-bs: 0 3px 1px 0 rgba(37, 34, 71, 0.05), 0 2px 2px 0 rgba(37, 34, 71, 0.1), 0 3px 3px 0 rgba(37, 34, 71, 0.05);
+        /* 进度条 背景颜色 */
+        --p-bgc: #B7E9FF;
+        /* 进度条滑块 背景颜色 */
+        --p-t-bgc: #4E88CA;
+        /* 提示 盒子阴影 */
+        --m-bs: 4px 4px 3px #B8B8B8, -1px -1px 2px #FFFFFF;
+    }
+
+    body {
+        background-color: var(--bgc);
+        color: var(--fc);
+    }
+
+    .active {
+        background-color: var(--c-bgc);
+    }
+
+    .message {
+        background-color: var(--bgc);
+        box-shadow: var(--bs);
+    }
+
+    .dialog {
+        color: var(--fc);
+        background-color: var(--bgc);
+        box-shadow: var(--bs);
+
+        & button {
+            color: var(--fc);
+            background-color: var(--bgc);
+            box-shadow: var(--bs);
+
+            &:hover {
+                box-shadow: var(--c-bs);
+                color: var(--c-fc);
+            }
+        }
+    }
+
+    .download-options {
+        color: var(--fc);
+        background-color: var(--bgc);
+        box-shadow: var(--bs);
+
+        & div {
+            & a {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+
+                &:hover {
+                    box-shadow: var(--c-bs);
+                    color: var(--c-fc);
+                }
+            }
+        }
+
+        & button {
+            color: var(--fc);
+            background-color: var(--bgc);
+            box-shadow: var(--bs);
+
+            &:hover {
+                box-shadow: var(--c-bs);
+                color: var(--c-fc);
+            }
+        }
+    }
+
+    .contextmenu-box {
+        background-color: var(--bgc);
+        box-shadow: var(--bs);
+
+        & div {
+            &:hover {
+                box-shadow: var(--c-bs);
+                color: var(--c-fc);
+            }
+        }
+    }
+
+    .header {
+        & .logo-part {
+            & .iconfont:first-child {
+                text-shadow: var(--ts);
+            }
+
+            & .theme-checkbox {
+                & .switch {
+                    &:checked+label::before {
+                        background-color: var(--c-bgc);
+                    }
+                }
+
+                & .switch+label {
+                    &::before {
+                        background-color: var(--t-bgc1);
+                    }
+
+                    &::after {
+                        background-color: var(--t-bgc2);
+                        box-shadow: var(--t-bs);
+                    }
+                }
+            }
+        }
+
+        & .search-part {
+            & .search {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+                color: var(--fc);
+
+                &:focus,
+                &:hover {
+                    background-color: var(--t-bgc2);
+                }
+            }
+
+            & .keywords {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+                color: var(--fc);
+
+                & .item {
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+            }
+
+            & .button {
+                &:hover {
+                    color: var(--c-fc);
+                }
+            }
+        }
+
+        & .win-ctrl-part {
+
+            & .iconfont {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+
+                &:hover {
+                    box-shadow: var(--c-bs);
+                    color: var(--c-fc);
+                }
+            }
+        }
+    }
+
+    .aside {
+        & .menu-box {
+            box-shadow: var(--bs);
+
+            & .iconfont {
+                box-shadow: var(--bs);
+
+                &:hover {
+                    box-shadow: var(--c-bs);
+                    color: var(--c-fc);
+                }
+            }
+        }
+    }
+
+    .content {
+        & .title-part {
+            & .iconfont {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+
+                &:hover {
+                    box-shadow: var(--c-bs);
+                    color: var(--c-fc);
+                }
+            }
+        }
+
+        & .data-part {
+            & .hot-page {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+
+                & div {
+                    & span {
+                        &:hover {
+                            color: var(--c-fc);
+                        }
+                    }
+                }
+            }
+
+            & .rank-page {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+
+                &:hover {
+                    color: var(--c-fc);
+                }
+            }
+
+            & .download-box {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+
+                & .progress {
+                    border: 1px solid var(--t-bgc1);
+                    background-color: var(--p-bgc);
+
+                    & .thumb {
+                        background-color: var(--p-t-bgc);
+                    }
+                }
+
+                &:hover {
+                    color: var(--c-fc);
+                }
+            }
+
+            & .online-list,
+            & .local-list {
+                box-shadow: var(--bs);
+
+                &:hover {
+                    box-shadow: var(--m-bs);
+                    color: var(--c-fc);
+                }
+            }
+
+            & .online-list {
+                & span {
+                    &:nth-child(2) {
+                        &:hover {
+                            color: var(--c-bgc);
+                        }
+                    }
+                }
+            }
+        }
+
+        & .set-part {
+            & .set-theme {
+                & .iconfont {
+                    box-shadow: var(--bs);
+
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+            }
+
+            & .set-url {
+                & input {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+                    color: var(--fc);
+
+                    &:focus,
+                    &:hover {
+                        background-color: var(--t-bgc2);
+                    }
+                }
+
+                & button {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+                    color: var(--fc);
+
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+            }
+
+            & .set-link {
+                & .iconfont {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+            }
+
+            & .set-log {
+                & .look-log {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+                    color: var(--fc);
+
+
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        & .music-progress {
+            border: 1px solid var(--t-bgc1);
+            background-color: var(--p-bgc);
+
+            & .thumb {
+                background-color: var(--p-t-bgc);
+            }
+
+            &:hover .thumb {
+                background-color: var(--c-bgc);
+            }
+        }
+
+        & .music-ctrl {
+            & .music-info {
+                background-color: var(--bgc);
+                box-shadow: var(--bs);
+
+                & div {
+                    & img {
+                        &:hover {
+                            box-shadow: var(--bs);
+                        }
+                    }
+                }
+
+                &>.iconfont {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+            }
+
+            & .play-ctrl {
+                & .iconfont {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+            }
+
+            & .other-ctrl {
+                & .iconfont {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+
+                    &:hover {
+                        box-shadow: var(--c-bs);
+                        color: var(--c-fc);
+                    }
+                }
+
+                & .voice-progress {
+                    background-color: var(--p-bgc);
+                    border: 1px solid var(--t-bgc1);
+
+                    & .thumb {
+                        background-color: var(--p-t-bgc);
+                    }
+
+                    &:hover .thumb {
+                        background-color: var(--c-bgc);
+                    }
+                }
+
+                & .play-list {
+                    background-color: var(--bgc);
+                    box-shadow: var(--bs);
+
+                    & .list-item {
+                        box-shadow: var(--bs);
+
+                        &:hover {
+                            color: var(--c-fc);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .groove-lyric {
+        background-color: var(--bgc);
+
+        & .music-info {
+            & .scroll-lyc {
+                & .lyc-box {
+                    & p {
+                        &.active {
+                            background: linear-gradient(to left, var(--bgc) 10%, var(--c-bgc), var(--bgc) 90%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notice-box button {
+        background-color: var(--bgc);
+        box-shadow: var(--bs);
+        color: var(--fc);
+
+        &:hover {
+            box-shadow: var(--c-bs);
+            color: var(--c-fc);
+        }
+    }
+}

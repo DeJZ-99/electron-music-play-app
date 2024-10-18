@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics</title>
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            -webkit-app-region: drag;
+            color: #ffffa1;
+        }
+
+        .contanier {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .lyric {
+                width: 90%;
+                font-size: 180%;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & .iconfont {
+                -webkit-app-region: no-drag;
+                border-radius: 8px;
+                padding: 1vw;
+                margin: 0 1vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    border: 1px solid #ffffa1;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="lyric">Hello! This`s desktop lyrics.</div>
+        <span class="iconfont"></span>
+    </div>
+    <script type="module">
+        import { select, save, read } from '../js/engine.js';
+        const button = select('.iconfont');
+        const lyric = select('.lyric');
+
+        button.addEventListener('mouseover', () => { button.innerHTML = "&#xe61d;"; });
+        button.addEventListener('mouseout', () => { button.innerHTML = ""; });
+
+        button.addEventListener('click', () => {
+            window.electronAPI.send("lyric:close");
+            save({ name: 'lyric_status', value: 'close' });
+        });
+
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'lyric') lyric.innerHTML = read(event.key);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .load-box {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading {
+            border-radius: 50%;
+            perspective: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 18vh;
+        }
+
+        .loading .item {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .loading .item:first-child {
+            border-bottom: 7px solid #fdea2e;
+            transform: rotateX(35deg) rotateY(-45deg);
+            animation: rotate-one 1s linear infinite;
+        }
+
+        .loading .item:nth-child(2) {
+            border-bottom: 7px solid #f40968;
+            transform: rotateX(50deg) rotateY(10deg);
+            animation: rotate-two 1s linear infinite;
+        }
+
+        .loading .item:last-child {
+            border-bottom: 7px solid #77d970;
+            transform: rotateX(35deg) rotateY(55deg);
+            animation: rotate-three 1s linear infinite;
+        }
+
+        .iconfont {
+            font-size: 150%;
+            color: #D9ACF5;
+        }
+
+        @keyframes rotate-one {
+            to {
+                transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            }
+        }
+
+        @keyframes rotate-two {
+            to {
+                transform: rotateX(50deg) rotateY(10deg) rotateZ(-360deg);
+            }
+        }
+
+        @keyframes rotate-three {
+            to {
+                transform: rotateX(35deg) rotateY(55deg) rotateZ(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="load-box">
+        <div class="loading">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="msg">
+            <span class="iconfont">&#xe50e;</span>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src * 'unsafe-inline'; style-src * 'unsafe-inline'; img-src * 'unsafe-inline';  media-src * 'unsafe-inline'; connect-src * ">
+    <title>Ginkgo Music</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/light.css">
+    <link rel="stylesheet" href="./css/dark.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-part">
+                <span class="iconfont">&#xe501;</span>
+                <span>Ginkgo Music</span>
+                <div class="theme-checkbox">
+                    <input value="private" name="switch" id="switch" type="checkbox" class="switch">
+                    <label for="switch">
+                        <span class="toggletext">
+                            <span class="unchecked">
+                                <span class="hiddenlabel">Unchecked: </span>
+                                <span class="iconfont">&#xe6d4;</span>
+                            </span>
+                            <span class="checked">
+                                <span class="hiddenlabel">Checked: </span>
+                                <span class="iconfont">&#xf0e6;</span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="search-part">
+                <input class="search" placeholder="请输入歌名或歌手名" type="text">
+                <span class="iconfont button">&#xe61f;</span>
+                <div class="keywords"></div>
+            </div>
+            <div class="win-ctrl-part">
+                <span class="iconfont" data-ctrl="min">&#xe66f;</span>
+                <span class="iconfont" data-ctrl="max">&#xe674;</span>
+                <span class="iconfont" data-ctrl="restore">&#xe62e;</span>
+                <span class="iconfont" data-ctrl="close">&#xe61d;</span>
+            </div>
+        </div>
+        <div class="aside">
+            <div class="menu-box">
+                <span class="iconfont active" data-menu="hot">&#xea1a;</span>
+                <span class="iconfont" data-menu="rank">&#xe607;</span>
+                <span class="iconfont" data-menu="download">&#xe637;</span>
+                <span class="iconfont" data-menu="local">&#xea3a;</span>
+                <span class="iconfont" data-menu="setting">&#xe601;</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title-part">
+                <div class="title">热门音乐</div>
+                <span class="iconfont" data-btn="back">&#xe73c;</span>
+                <span class="iconfont" data-btn="del">&#xe623;</span>
+                <span class="iconfont" data-btn="refresh">&#xe7ae;</span>
+                <span class="iconfont" data-btn="location">&#xe642;</span>
+            </div>
+            <div class="data-part">
+                <div class="local-page"></div>
+            </div>
+            <div class="set-part">
+                <div class="set-theme">
+                    设置主题：
+                    <span class="iconfont" data-theme="system">&#xe8d8;</span>
+                    <span class="iconfont" data-theme="dark">&#xe6d4;</span>
+                    <span class="iconfont" data-theme="light">&#xf0e6;</span>
+                    当前主题：<span>跟随系统</span>
+                </div>
+                <div class="set-url">
+                    <div>
+                        <label for="local-url">设置本地音乐路径：</label>
+                        <input type="text" id="local-url" placeholder="例如：C/Music">
+                        <button class="local-url" data-url="local">选择</button>
+                    </div>
+                    <div>
+                        <label for="move-url">设置移动音乐路径：</label>
+                        <input type="text" id="move-url" placeholder="例如：C/Downloads">
+                        <button class="move-url" data-url="move">选择</button>
+                        <button class="moving">移入本地音乐</button>
+                    </div>
+                </div>
+                <div class="set-link">
+                    关于作者：
+                    <span class="iconfont link-github">&#xe50c;</span>
+                    <span class="iconfont link-qq">&#xe6ca;</span>
+                </div>
+                <div class="set-log">
+                    查看更新日志：<button class="look-log">确定</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <audio src=""></audio>
+            <div class="music-progress">
+                <div class="thumb"></div>
+            </div>
+            <div class="music-time-ratio">
+                <span class="now-time">00:00</span>/<span class="total-time">00:00</span>
+            </div>
+            <div class="music-ctrl">
+                <div class="music-info">
+                    <div>
+                        <img src="../iconfont/music.png" alt="">
+                        <div class="info">
+                            <span class="songname">歌名</span>
+                            <span class="singer">歌手</span>
+                        </div>
+                    </div>
+                    <span class="iconfont lyric">&#xe636;</span>
+                </div>
+                <div class="play-ctrl">
+                    <span class="iconfont" data-music="prev">&#xea25;</span>
+                    <span class="iconfont" data-music="play">&#xe6c8;</span>
+                    <span class="iconfont" data-music="pause">&#xe6c7;</span>
+                    <span class="iconfont" data-music="next">&#xea1d;</span>
+                </div>
+                <div class="other-ctrl">
+                    <div class="voice-progress">
+                        <div class="thumb"></div>
+                    </div>
+                    <div class="voice-ctrl">
+                        <span class="iconfont" data-voice="mute">&#xe503;</span>
+                        <span class="iconfont" data-voice="unmute">&#xe6f5;</span>
+                    </div>
+                    <div class="mode-ctrl">
+                        <span class="iconfont" data-mode="order">&#xe7ae;</span>
+                        <span class="iconfont" data-mode="loop">&#xe8c5;</span>
+                    </div>
+                    <span class="play-list-ctrl iconfont">&#xe675;</span>
+                    <div class="play-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="groove-lyric">
+        <canvas id="canvas"></canvas>
+        <div class="music-info">
+            <div class="groove">
+                <img src="../iconfont/music-playing.png" alt="">
+            </div>
+            <div class="scroll-lyc"></div>
+        </div>
+    </div>
+    <script type="module" src="./render.js"></script>
+</body>
+
+</html>

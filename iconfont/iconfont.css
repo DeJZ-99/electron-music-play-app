@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1728993965076') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiangxiajiantou3:before {
+  content: "\e68a";
+}
+
+.icon-iconcankaoxian:before {
+  content: "\e61d";
+}
+
+.icon-xiangxia:before {
+  content: "\e637";
+}
+
+.icon-weather-color_moon-stars:before {
+  content: "\e6d4";
+}
+
+.icon-github:before {
+  content: "\e50c";
+}
+
+.icon-shezhi:before {
+  content: "\e601";
+}
+
+.icon-disc-pencil:before {
+  content: "\ea3a";
+}
+
+.icon-sun:before {
+  content: "\f0e6";
+}
+
+.icon-qq:before {
+  content: "\e6ca";
+}
+
+.icon-16gl-nextFrameCircle:before {
+  content: "\ea1d";
+}
+
+.icon-16gl-previousFrameCircle:before {
+  content: "\ea25";
+}
+
+.icon-kehuweizhidingwei_youdingwei:before {
+  content: "\e642";
+}
+
+.icon-loading:before {
+  content: "\e50e";
+}
+
+.icon-download:before {
+  content: "\e617";
+}
+
+.icon-shandian:before {
+  content: "\e8c5";
+}
+
+.icon-ic_my_library_music_px:before {
+  content: "\e675";
+}
+
+.icon-paihangbang:before {
+  content: "\e607";
+}
+
+.icon-reload:before {
+  content: "\e7ae";
+}
+
+.icon-Soundshengyin13:before {
+  content: "\e6f5";
+}
+
+.icon-Icon_mini:before {
+  content: "\e66f";
+}
+
+.icon-yinlekuguanli:before {
+  content: "\ea1a";
+}
+
+.icon-me_theme:before {
+  content: "\e8d8";
+}
+
+.icon-Delete:before {
+  content: "\e623";
+}
+
+.icon-serach:before {
+  content: "\e61f";
+}
+
+.icon-shuyef:before {
+  content: "\e501";
+}
+
+.icon-outline-stop-circle:before {
+  content: "\e6c7";
+}
+
+.icon-outline-play-circle:before {
+  content: "\e6c8";
+}
+
+.icon-icon-max:before {
+  content: "\e674";
+}
+
+.icon-Soundshengyin10:before {
+  content: "\e503";
+}
+
+.icon-icon_unmaximize-win_outlined:before {
+  content: "\e62e";
+}
+
+.icon-statusbar_Lyrics:before {
+  content: "\e636";
+}
+
+.icon-mti-fanhui:before {
+  content: "\e73c";
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark.css">
+    <link rel="stylesheet" href="../css/light.css">
+    <style>
+        :root {
+            --size: 16px;
+        }
+
+        .notice-box {
+            font-size: calc(var(--size) * 0.8);
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 3vh;
+        }
+
+        .title {
+            font-size: var(--size);
+            font-weight: bold;
+        }
+
+        p:not(.title) {
+            text-indent: calc((var(--size) * 0.8) * 2);
+        }
+
+        .btn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 20px;
+        }
+
+        :where(.notice-btn, .look-item) {
+            padding: 0 2vw;
+            width: auto;
+            height: 30px;
+            border-radius: 5px;
+            margin: 0 2vw;
+            margin-bottom: 20px;
+        }
+
+        .exploitation {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notice-box">
+        <h2>更新日志</h2>
+        <div class="official"></div>
+        <div class="exploitation"></div>
+        <div class="btn">
+            <button class="look-item">查看开发版日志</button>
+            <button class="notice-btn">确定</button>
+        </div>
+    </div>
+    <script type="module">
+        import { select, css } from '../js/engine.js';
+
+        const button_1 = select('.notice-btn');
+        const button_2 = select('.look-item');
+        const official = select('.official');
+        const exploitation = select('.exploitation');
+
+        button_1.addEventListener('click', () => {
+            window.electronAPI.send("close:notice");
+        });
+
+        button_2.addEventListener('click', () => {
+            const status = window.getComputedStyle(official).display;
+            switch (status) {
+                case 'none': _status('block', 'none', '开发'); break;
+                case 'block': _status('none', 'block', '正式'); break;
+            }
+
+            function _status(status_1, status_2, txt) {
+                css(official, { 'display': status_1 });
+                css(exploitation, { 'display': status_2 });
+                button_2.innerHTML = `查看${txt}版日志`;
+            }
+        });
+    </script>
+</body>
+
+</html>
